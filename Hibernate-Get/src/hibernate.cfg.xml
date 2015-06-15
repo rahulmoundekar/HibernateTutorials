@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.username">root</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/revisehibernate</property>
+        <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="myeclipse.connection.profile">sql</property>
+        <property name="connection.password">root</property>
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        
+        <!-- Show all executed SQL to stdout -->
+         <property name="show_sql">true</property> 
+        
+        <!-- Drop and re-create the database schema on startup -->
+         <property name="hbm2ddl.auto">update</property> 
+         <property name="auto-import">false</property>
+		
+		<mapping resource="get/employee.hbm.xml"/>		
+	</session-factory>
+</hibernate-configuration>
+

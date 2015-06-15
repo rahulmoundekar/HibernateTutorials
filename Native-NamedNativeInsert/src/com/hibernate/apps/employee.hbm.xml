@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 4, 2012 11:07:57 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.hibernate.apps.Employee" table="EMPLOYEE" schema="SCOTT">
+        <id name="eid" type="int">
+            <column name="EID"  />
+            <generator class="assigned" />
+        </id>
+        <property name="fname" type="string">
+            <column name="FNAME" length="20" />
+        </property>
+        <property name="lname" type="string">
+            <column name="LNAME" length="20" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="20" />
+        </property>
+    </class>
+    <sql-query name="test1">
+        insert into Employee values(?,?,?,?)
+    </sql-query>
+</hibernate-mapping>

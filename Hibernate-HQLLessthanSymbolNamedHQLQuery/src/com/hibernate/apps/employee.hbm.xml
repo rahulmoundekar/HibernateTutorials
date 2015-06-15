@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jul 3, 2012 10:48:51 AM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.hibernate.apps.Employee" table="EMPLOYEE" >
+        <id name="eid" type="int">
+            <column name="EID" />
+            <generator class="assigned" />
+        </id>
+        <property name="fname" type="string">
+            <column name="FNAME" length="20" />
+        </property>
+        <property name="lname" type="string">
+            <column name="LNAME" length="20" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="20" />
+        </property>
+    </class>
+   <query name="test2">
+       <![CDATA[
+       select eb.fname,eb.lname from Employee eb where eb.eid>=? and eb.eid<=?]]>
+   </query> 
+   
+      <query name="test3">
+        select eb.fname,eb.lname from Employee eb where eb.eid>=? and eb.eid&lt;=?  
+          
+     </query> 
+</hibernate-mapping>

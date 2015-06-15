@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.hibernate.apps.Employee" table="EMPLOYEE">
+<id name="Eid" column="EID">
+</id>
+<property name="Fname" column="FNAME" length="25" unique="true" /> 
+<property name="Lname" column="LNAME" length="22" />
+<property name="Email" column="EMAIL" length="21" unique="true"/>
+</class>
+</hibernate-mapping>

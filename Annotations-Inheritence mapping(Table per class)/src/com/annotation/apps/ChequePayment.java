@@ -1,0 +1,1 @@
+package com.annotation.apps;import javax.persistence.*;@Entity@DiscriminatorValue(value = "CHEQUE")public class ChequePayment extends Payment {	@Column(name = "cctype")	private String chequeType;	public String getChequeType() {		return chequeType;	}	public void setChequeType(String chequeType) {		this.chequeType = chequeType;	}}

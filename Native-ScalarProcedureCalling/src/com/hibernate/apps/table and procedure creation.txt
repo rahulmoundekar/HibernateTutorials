@@ -1,0 +1,14 @@
+create table employee(eid number(10) primary key, fname varchar2(10), lname varchar2(10),email varchar2(10))
+/
+
+
+
+Procedure creation:
+
+create or replace procedure my_procedure(mycur out sys_refcursor, cond in varchar2) as
+begin
+open mycur for
+select fname,lname from employee where email like cond;
+end;
+/
+

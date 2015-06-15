@@ -1,0 +1,13 @@
+
+create table employee(eid number(10) primary key, fname varchar2(10), lname varchar2(10),email varchar2(10))
+/
+
+
+
+create or replace procedure fir_emp(stno in number,endno in number, cnt out number)
+as
+begin
+delete from employee where eid>=stno and eid<=endno;
+cnt:=SQL%ROWCOUNT;
+end;
+/

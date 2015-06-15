@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-Jul-2012 17:05:59 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.hibernate.apps.Speaker" table="speaker3" >
+        <id name="sid" />
+		<property name="sname"/>
+		<bag name="sessions">
+		<key column="speaker_id"/>
+		<one-to-many class="com.hibernate.apps.Sessions"/>
+		</bag>
+		<bag name="Phonenumbers" table="speaker_phonenumbers3">
+		<key column="speaker_id" />
+	   <element column="phone" type="string" />
+		</bag>
+		</class>
+		
+		<class name="com.hibernate.apps.Sessions" table="speaker_session3">
+		<id name="sesid" />
+		<property name="sesname" column="SES_NAME"/>
+		
+		
+		
+	</class>
+		
+		</hibernate-mapping>
+		

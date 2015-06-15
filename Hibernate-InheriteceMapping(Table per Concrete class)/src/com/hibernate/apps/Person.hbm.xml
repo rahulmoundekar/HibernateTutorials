@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.hibernate.apps.Person" table="in_persons4">
+		<id name="id" />
+		<property name="name" />
+		<property name="company" />
+	</class>
+
+	<class name="com.hibernate.apps.Employee" table="in_employees4">
+		<id name="id" />
+		<property name="name" />
+		<property name="company" />
+		<property name="salary" />
+		<property name="department" />
+	</class>
+
+	<class name="com.hibernate.apps.Customer" table="in_customers4">
+		<id name="id" />
+		<property name="name" />
+		<property name="company" />
+		<property name="address" />
+	</class>
+
+</hibernate-mapping>

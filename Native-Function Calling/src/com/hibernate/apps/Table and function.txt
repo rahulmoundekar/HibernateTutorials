@@ -1,0 +1,13 @@
+
+create table employee(eid number(10) primary key, fname varchar2(10), lname varchar2(10),email varchar2(10))
+/
+
+
+create or replace function emp_function(no in number) return sys_refcursor 
+as my_cursor sys_refcursor;
+begin
+open my_cursor for
+select eid,fname,lname,email from employee where eid>=no;
+return my_cursor;
+end;
+/

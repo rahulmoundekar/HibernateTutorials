@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+  <!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+  <hibernate-mapping>
+      <class name="com.hibernate.apps.User" table="USER_TABLE" >
+          
+		  <id name="userId" column="USER_ID"/>
+          <property name="firstName"  column="FIRST_NAME"/>
+
+		  <set name="phones"   table="PHONE_NUMBERS" cascade="all" inverse="false" lazy="true">
+            <key column="UNID"/>
+            <one-to-many class="com.hibernate.apps.PhoneNumber"  />
+           </set>
+
+      </class>
+  </hibernate-mapping>

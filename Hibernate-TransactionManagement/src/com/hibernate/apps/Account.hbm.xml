@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-Jul-2012 00:34:06 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.hibernate.apps.Account" table="ACCOUNT">
+        <id name="acno" type="int">
+            <column name="ACNO"  />
+            <generator class="assigned" />
+        </id>
+        <property name="holdername" type="string">
+            <column name="HOLDERNAME" length="20" />
+        </property>
+        <property name="balance" type="double">
+            <column name="BALANCE"  />
+        </property>
+    </class>
+</hibernate-mapping>

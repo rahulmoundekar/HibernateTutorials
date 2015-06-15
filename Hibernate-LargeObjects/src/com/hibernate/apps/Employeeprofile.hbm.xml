@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 14-Jul-2012 01:05:23 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.hibernate.apps.Employeeprofile" table="EMPLOYEEPROFILE">
+        <id name="empid" type="int">
+            <column name="EMPID"  />
+            <generator class="assigned" />
+        </id>
+        <property name="ename" type="string">
+            <column name="ENAME" length="10" />
+        </property>
+        <property name="empresume" type="clob">
+            <column name="EMPRESUME" />
+        </property>
+        <property name="empphoto" type="blob">
+            <column name="EMPPHOTO" />
+        </property>
+    </class>
+</hibernate-mapping>

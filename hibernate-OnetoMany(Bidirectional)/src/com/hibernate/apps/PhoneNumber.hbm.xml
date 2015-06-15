@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping>
+
+ <class name="com.hibernate.apps.PhoneNumber" table="PHONE_NUMBERS" >
+
+   	   <id name="phone"  column="PHONE"/>
+       <property name="numberType" column="NUMBER_TYPE"/>
+       <property name="id" column="UNID" insert="false" update="false"/>
+
+	   <many-to-one name="parent" class="com.hibernate.apps.User"  column="UNID" cascade="all"/>
+  </class>
+</hibernate-mapping>

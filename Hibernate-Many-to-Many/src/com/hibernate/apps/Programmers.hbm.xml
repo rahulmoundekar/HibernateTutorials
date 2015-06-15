@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23-Jul-2012 17:05:59 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.hibernate.apps.Programmers" table="PROGRAMMERS" >
+        <id name="pid">
+            <column name="PID" />
+            <generator class="assigned" />
+        </id>
+        <property name="pname" type="string">
+            <column name="PNAME" length="10" />
+        </property>
+        <property name="salary" type="double">
+            <column name="SALARY" precision="8" />
+        </property>
+        <set name="projects" table="programmers_projects">
+            <key column="programmer_id"/>
+            <many-to-many class="com.hibernate.apps.Projects" column="project_id"/>
+            </set>
+         </class>
+     <class name="com.hibernate.apps.Projects" table="PROJECTS" >
+        <id name="prodid">
+            <column name="PRODID" />
+            <generator class="assigned" />
+        </id>
+        <property name="proname" type="string" column="PRONAME"/>
+        
+            <set name="programmers" table="programmers_projects">
+                <key column="project_id"/>
+                <many-to-many class="com.hibernate.apps.Programmers" column="programmer_id"/>
+            </set>
+    </class>
+    </hibernate-mapping>
+
+    
+  

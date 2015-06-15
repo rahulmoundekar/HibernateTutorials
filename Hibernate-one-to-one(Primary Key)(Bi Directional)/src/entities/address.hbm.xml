@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="entities.Address" table="ADDRESS">
+    <id name="addressId" type="long" column="address_id" >
+   		<generator class="foreign">
+            <param name="property">customer</param>
+        </generator>
+
+ 	</id>
+ 	
+ 	<property name="addressLine1">
+     <column name="address_line1" />
+    </property>
+    
+    <property name="addressLine2">
+     <column name="address_line2" />
+    </property>
+    
+    <property name="city">
+     <column name="city" />
+    </property>
+    
+    <property name="state">
+     <column name="state" />
+    </property>
+    
+    <property name="pincode">
+     <column name="pincode" />
+    </property>
+    
+    <one-to-one name="customer" 
+                class="entities.Customer"
+                constrained="true" />
+                
+    
+    
+    
+  </class>
+</hibernate-mapping>

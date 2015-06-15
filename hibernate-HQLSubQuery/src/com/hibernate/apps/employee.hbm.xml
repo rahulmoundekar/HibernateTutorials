@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 02-Aug-2012 23:18:49 by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="com.hibernate.apps.Employee" table="EMPLOYEE" >
+        <id name="eid" type="long">
+            <column name="EID" precision="10" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="fname" type="string">
+            <column name="FNAME" length="10" />
+        </property>
+        <property name="lname" type="string">
+            <column name="LNAME" length="10" />
+        </property>
+        <property name="email" type="string">
+            <column name="EMAIL" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

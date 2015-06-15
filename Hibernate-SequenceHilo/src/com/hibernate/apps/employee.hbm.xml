@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+<class name="com.hibernate.apps.Employee" table="EMPLOYEE">
+<id name="Eid" column="EID">
+<generator class="seqhilo">
+<param name="sequence">seq1</param>
+<param name="max_lo">5</param>
+</generator>
+</id>
+
+<property name="Fname" column="FNAME"/>
+<property name="Lname" column="LNAME"/>
+<property name="Email" column="EMAIL"/>
+</class>
+</hibernate-mapping>
